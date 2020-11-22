@@ -12,6 +12,7 @@ const Topics = ({
 
 }) => {
     let match = useRouteMatch();
+    console.log('topics: match ', match);
     return (
         <div className="topics">
             <h1>Topics</h1>
