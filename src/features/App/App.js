@@ -1,4 +1,6 @@
 import React from 'react';
+import "../../assets/styles/index.css";
+
 import { 
   BrowserRouter as Router,
   Switch,
