@@ -1,3 +1,8 @@
+$modal-header-height: 40px;
+$modal-footer-height: 40px;
+$modal-mask-bg-color: rgba(0, 0, 0, 0.7);
+
+
 .modal{
     z-index: 1000
 }
@@ -21,31 +26,28 @@
 }
 
 .modal__content {
-    display: inline-flex;
-    flex-direction: column;
+    display: inline-block;
+    position: relative;
     max-width: 94%;
     height: auto;
-    margin: 3% auto;
+    margin: 2% auto;
     background: #fff;
     border-radius: 6px;
 }
 
 .modal__header {
-    flex: 0 0 auto;
     width: 100%;
-    height: 40px;
+    height: $modal-header-height;
     border-bottom: 1px solid gray;
 }
 
 .modal__body {
-    flex: 1 1 auto;
     overflow: auto;
 }
 
 .modal__footer {
-    flex: 0 0 auto;
     width: 100%;
-    height: 40px;
+    height: $modal-footer-height;
     border-top: 1px solid gray;
 }
 
