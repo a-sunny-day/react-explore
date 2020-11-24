@@ -20,6 +20,7 @@
     "camelcase": "^6.1.0",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "classnames": "^2.2.6",
+    "cross-env": "^7.0.2",
     "css-loader": "4.3.0",
     "dotenv": "8.2.0",
     "dotenv-expand": "5.1.0",
@@ -75,7 +76,7 @@
     "workbox-webpack-plugin": "5.1.4"
   },
   "scripts": {
-    "start": "node scripts/start.js",
+    "start": "cross-env PORT=3001 node scripts/start.js",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
     "presay-hello": "echo 'before hello'",
