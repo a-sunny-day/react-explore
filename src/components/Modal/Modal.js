@@ -17,8 +17,8 @@ const Modal = ({
 }) => {
     let modalWrapperCls = classnames(
         { 
-            "modal--wrapper__centered": centered,
-            "modal--wrapper__scrollable": scrollable
+            "modal__wrapper--centered": centered,
+            "modal__wrapper--scrollable": scrollable
         }
     )
     let modalContentStyle = {
@@ -29,16 +29,16 @@ const Modal = ({
 
     return (
         <div className="modal">
-            <div className={`modal--mask ${maskClsName || ""}`} style={maskStyle}></div>
-            <div className={`modal--wrapper ${modalWrapperCls}`}>
-                <div className={`modal--content ${modalClsName || ""}`} style={modalContentStyle}>
-                    <div className="modal--header">
+            <div className={`modal__mask ${maskClsName || ""}`} style={maskStyle}></div>
+            <div className={`modal__wrapper ${modalWrapperCls}`}>
+                <div className={`modal__content ${modalClsName || ""}`} style={modalContentStyle}>
+                    <div className="modal__header">
                         <span>{title}</span>
                     </div>
-                    <div className="modal--body">
+                    <div className="modal__body">
                         {children}
                     </div>
-                    <div className="modal--footer">
+                    <div className="modal__footer">
                         <button>{footer}</button>
                     </div>
                 </div>
