@@ -5,18 +5,22 @@ import './About.scss';
 const About = ({
 
 }) => {
+    let modalStyle = {};
+
     return (
         <Modal
-                title="About"
-                footer="Ok"
-                centered={false}
-                scrollable={false}
-            >
-                <div className="about">
-                    <h2>Copyright</h2>
-                    <div>About</div>
-                </div>
-            </Modal>
+            visible={true}
+            title="About"
+            footer="Ok"
+            modalStyle={modalStyle}
+            centered={true}
+            scrollable={true}
+        >
+            <div className="about">
+                <h2>Copyright</h2>
+                <div>About</div>
+            </div>
+        </Modal>
     )
 }
 
