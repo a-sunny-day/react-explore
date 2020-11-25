@@ -1,7 +1,6 @@
 $modal-header-height: 40px;
 $modal-footer-height: 40px;
-$modal-mask-bg-color: rgba(0, 0, 0, 0.7);
-
+$modal-mask-bg-color: rgba(0, 0, 0, 0.45);
 
 .modal{
     z-index: 1000
@@ -13,7 +12,7 @@ $modal-mask-bg-color: rgba(0, 0, 0, 0.7);
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
+    background: $modal-mask-bg-color;
 }
 
 .modal__wrapper {
@@ -42,7 +41,8 @@ $modal-mask-bg-color: rgba(0, 0, 0, 0.7);
 }
 
 .modal__body {
-    overflow: auto;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 .modal__footer {
@@ -53,6 +53,8 @@ $modal-mask-bg-color: rgba(0, 0, 0, 0.7);
 
 // center content
 .modal__wrapper--centered {
+    text-align: center;
+
     &::before {
         display: inline-block;
         width: 0;
@@ -60,8 +62,10 @@ $modal-mask-bg-color: rgba(0, 0, 0, 0.7);
         content: "";
         vertical-align: middle;
     }
+    
     .modal__content {
         vertical-align: middle;
+        text-align: initial;
     }
 }
 
