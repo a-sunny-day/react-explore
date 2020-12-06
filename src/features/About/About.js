@@ -14,8 +14,8 @@ const About = ({
             <button onClick={openModal}>open modal</button>
             <Modal
                 visible={modalVisible}
-                title="This is about dialog"
-                footer="Ok"
+                title={null}
+                footer={null}
                 closeMe={closeModal}
                 onClickOk={closeModal}
                 onClickCancel={closeModal}

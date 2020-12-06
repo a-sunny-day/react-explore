@@ -1,0 +1,7 @@
+*** browser:
+crypto-js
+uuid
+bcryptjs
+
+*** node.js
+argon2

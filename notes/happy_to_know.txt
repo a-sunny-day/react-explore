@@ -1,0 +1,10 @@
+In the client side of the application sha1 algorithm to hash the sensitive information. However it remains vulnerable, as it is considered completely unsafe
+
+
+In this case, user passwords are hashed using the md5 function from the CryptoJS module before being sent to the backend for storing them in the database (/src/containers/forms/RegisterForm.js). 
+If the hacker gains access to the database, 
+they can try billions of password candidates and they will succeed in a short amount of time because MD5 is a fast hashing algorithm.
+
+
+n case the user is inactive for 15 minutes, the Idle component cleans up the session. Also, the lifetime of the session is set to 120 minutes (maxAge), 
+which is reset on every response (rolling is set to true), which means if a user closes the browser, the cookie will expire after 120 minutes.
