@@ -1,0 +1,31 @@
+.home__tags {
+    // The <ul> and <ol> elements have a top and bottom margin of 16px (1em)  and a padding-left of 40px (2.5em.)
+    // The <p> elements have a top and bottom margin of 16px (1em)
+    margin: 0;
+    padding-left: 6px;
+    text-align: left;
+    list-style: none; // remove left dot
+}
+
+.home__tag-item {
+    display: inline;
+    padding: 0.2rem;
+}
+
+.home__divider {
+    // em 相对于当前元素字体大小 font-size * 0.xxx
+    // font-size: 16px, 并不是文字一样的高度 16px -> 21px; 22px -> 30px
+    display: inline-block;
+    height: 0.8em;
+    
+    // relative 的元素也可以自己 相对于自己原本的文档流位置 来相对改变自己的位置。
+    position: relative;
+    top: 0.1em;
+    margin: 0 0.25em;
+    border-left: 1px solid gray;
+}
+
+.font-size-22{
+    font-size: 22px;
+    padding: 0 0.5em;
+}
