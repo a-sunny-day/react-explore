@@ -14,6 +14,7 @@ import './App.css';
 import Home from '../Home/Home';
 import About from "../About/About";
 import Topics from '../Topics/Topics';
+import Counter from '../Counter/Counter';
 
 function App() {
   return (
@@ -41,6 +42,7 @@ function App() {
                     </Route>
                 </Switch>
             </section>
+            <Counter />
         </div>
     </Router>
   );
