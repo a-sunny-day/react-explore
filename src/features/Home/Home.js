@@ -1,5 +1,6 @@
 import React, { useLayoutEffect, useRef, useState} from 'react';
 import "./Home.scss";
+import Popup from '../ImperativeComponent/ImperativeCom';
 
 const Home = ({
 
@@ -34,9 +35,16 @@ const Home = ({
         )
     }, []);
     
+    const onClickHome = () => {
+        const container = Popup.render({
+            text: 'hello react dom',
+            onClose: () => { Popup.destroy(container)}
+        })
+    };
+
     return (
         <div className="home">
-            <h2>Home</h2>
+            <h2 onClick={onClickHome}>Home</h2>
             <section className="home__tags">
                 {tagEles}
             </section>
